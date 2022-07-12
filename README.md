@@ -19,6 +19,6 @@ To start the mysql server, #mysql-ctl start
 To stop and start #mysql-ctl cli
 To exit from mysql ---> exit
 
-To see the existing databases
+To see the existing databases <br>
   show databases;
 
