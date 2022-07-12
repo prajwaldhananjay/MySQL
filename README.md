@@ -54,6 +54,50 @@ DESC table_name;
 To delete a table, <br>
   DROP TABLE table_name;
   
+To insert data into a table <br>
+  INSERT INTO table_name(column_name1, column_name2)
+  VALUES('data_for_column1', 'data_for_column2');
+  
+To view the data in a table <br>
+  SELECT * FROM table_name;
+ 
+To view what the warning was <br>
+  SHOW WARNINGS;
+  
+NULL - The value is not knwon ( Does not mean zero ) <br>
+  By default a column takes in NULL entries. So while creating a table, NOT NULL must be mentioned to change it. <br>
+  CREATE TABLE table_name( column_name data_type NOT NULL ); <br>
+  So by default, int type stores 0 and varchar type sets black space to that row
+  
+To set a default value, <br>
+  CREATE TABLE table_name( column_name data_type NOT NULL DEFAULT 'unnamed'); <br>
+  Ex : DEFAULT '99' set for INT
+  
+PRIMARY KEY <br>
+  It is a unique identifier for a row. <br>
+  CREATE TABLE table_name
+  (
+    column_name1 data_type,
+    column_name2 data_type,
+    PRIMARY KEY (column_name1)
+   );
+  
+  Example <br>
+  CREATE TABLE unique_cats2 (
+    cat_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100),
+    age INT,
+    PRIMARY KEY (cat_id)
+);
+  
+*----------*-----------* <br>
+
+CRUD
+  
+  
+
+  
+
 
   
 
