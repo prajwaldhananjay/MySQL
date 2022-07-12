@@ -83,17 +83,25 @@ PRIMARY KEY <br>
    );
   
   Example <br>
-  CREATE TABLE unique_cats2 (
-    cat_id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(100),
-    age INT,
-    PRIMARY KEY (cat_id)
-);
+  CREATE TABLE unique_cats2 ( <br>
+    cat_id INT NOT NULL AUTO_INCREMENT, <br>
+    name VARCHAR(100), <br>
+    age INT, <br>
+    PRIMARY KEY (cat_id) <br>
+);  <br>
   
 *----------*-----------* <br>
 
 CRUD
   
+SELECT age FROM cats; <br>
+SELECT name FROM cats; <br>
+SELECT name, age FROM cats; 
+  
+WHERE Clause <br>
+SELECT * FROM cats WHERE age=4; <br>
+SELECT * FROM cats WHERE name = 'blue'; <br>
+SELECT * FROM cats WHERE cat_id=age; <br>
   
 
   
