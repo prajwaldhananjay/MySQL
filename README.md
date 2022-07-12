@@ -20,5 +20,5 @@ To stop and start #mysql-ctl cli
 To exit from mysql ---> exit
 
 To see the existing databases
-show databases;
+  show databases;
 
