@@ -103,6 +103,47 @@ SELECT * FROM cats WHERE age=4; <br>
 SELECT * FROM cats WHERE name = 'blue'; <br>
 SELECT * FROM cats WHERE cat_id=age; <br>
   
+ALIASES <br>
+SELECT cat_id AS ID FROM cats; <br>
+SELECT name AS cat_name, breed AS kitty_breed FROM cats; <br>
+
+UPDATE COMMAND
+  UPDATE cats SET breed='Shorthair' WHERE breed='Tabby'; <br>
+  UPDATE cats SET age=14 WHERE name='Misty'; <br>
+  
+DELETE COMMAND
+  DELETE FROM table_name; // Deletes all the entries in the table. DIff from Drop Table <br>
+  DELETE FROM cats WHERE name = 'Misty'; //Will delete the entry with name MIsty <br>
+  
+DISTINCT - used to get distinct rows only. <br>
+SELECT author_lname FROM books; <br>
+
+SELECT DISTINCT author_lname FROM books; <br>
+ 
+SELECT author_fname, author_lname FROM books; <br>
+ 
+SELECT DISTINCT CONCAT(author_fname,' ', author_lname) FROM books; <br>
+ 
+SELECT DISTINCT author_fname, author_lname FROM books; <br>
+  
+ORDER BY - used to sort the data.
+  
+SELECT author_lname FROM books ORDER BY author_lname;  // sorts based on author_lname <br>
+ 
+SELECT title FROM books ORDER BY title; // sorts title of books based on title <br>
+By default, it's sorted in Ascending order.
+ 
+SELECT released_year FROM books ORDER BY released_year DESC; // DESC is used to sort in descending order <br>
+SELECT name, breed FROM cats ORDER BY 2; // 2 refers to the 2nd column i.e breed. <br>
+SELECT name, breed FROM cats ORDER BY 2,1; // First sort by 2, then sort similar ones by 1.
+  
+LIMIT - Used to limit the number of entries. <br>
+  SELECT title FROM books LIMIT 10; // Gives the top 10 entries from books <br>
+  SELECT * FROM books LIMIT 1; // First row of the table <br>
+  SELECT title, released_year FROM books  
+ORDER BY released_year DESC LIMIT 5; // GIves top 5 entries of title and released_year sorted in descending order by released_year <br>
+  
+
 
   
 
