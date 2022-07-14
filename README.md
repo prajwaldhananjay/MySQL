@@ -141,10 +141,33 @@ LIMIT - Used to limit the number of entries. <br>
   SELECT title FROM books LIMIT 10; // Gives the top 10 entries from books <br>
   SELECT * FROM books LIMIT 1; // First row of the table <br>
   SELECT title, released_year FROM books  
-ORDER BY released_year DESC LIMIT 5; // GIves top 5 entries of title and released_year sorted in descending order by released_year <br>
+ORDER BY released_year DESC LIMIT 5; // Gives top 5 entries of title and released_year sorted in descending order by released_year <br>
+  1st row is 0, 2nd row is 1 and so on
   
+SELECT title, released_year FROM books 
+ORDER BY released_year DESC LIMIT 0,5; // 0 is the first row that it'll retrieve and upto the 5th row.  <br>
 
-
+LIKE - It's keyword used to match a pattern. Used along with WHERE. <br>
+  SELECT title, author_fname FROM books WHERE author_fname LIKE '%da%'; // Retrieves author_fname which has 'da' in it. <br>
+  _ underscore refers to one character. LIKE '_ad_' refers to a 4 character word with ad in between. <br>
+  Use \% or \_ if you want to look for actual % or _.
+  
+  
+DATE, DATETIME AND TIMESTAMP
+  To print the current time <br>
+  SELECT CURTIME();
+  
+  To print the current date <br>
+  SELECT CURDATE();
+  
+  To print the day of the week in number. Ex : Sunday is 0 <br>
+  SELECT DATE_FORMAT(NOW(), '%w');
+  
+  
+  To print the day of the week in day. Ex : Sunday <br>
+  SELECT DATE_FORMAT(NOW(), '%W');
+  
+  
   
 
 
